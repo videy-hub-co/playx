@@ -130,12 +130,30 @@ body{
     justify-content:center;
 }
 
-/* GALLERY */
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:10px;
-    margin-top:25px;
+<!-- GALLERY -->
+<div class="gallery">
+
+<div class="gallery-item" onclick="openAd()">
+    <img src="foto1.jpg">
+    <div class="gallery-play">▶</div>
+</div>
+
+<div class="gallery-item" onclick="openAd()">
+    <img src="foto2.jpg">
+    <div class="gallery-play">▶</div>
+</div>
+
+<div class="gallery-item" onclick="openAd()">
+    <img src="foto3.jpg">
+    <div class="gallery-play">▶</div>
+</div>
+
+<div class="gallery-item" onclick="openAd()">
+    <img src="foto4.jpg">
+    <div class="gallery-play">▶</div>
+</div>
+
+</div>
 }
 
 .gallery img{
@@ -145,6 +163,53 @@ body{
     border-radius:10px;
     border:2px solid #ff2d6f;
     cursor:pointer;
+}
+
+.gallery-item{
+    position:relative;
+    overflow:hidden;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.gallery-item img{
+    width:100%;
+    height:140px;
+    object-fit:cover;
+    border-radius:10px;
+    border:2px solid #ff2d6f;
+    display:block;
+}
+
+/* PLAY ICON DI GALLERY */
+.gallery-play{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:50px;
+    height:50px;
+    background:rgba(255,45,111,.85);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    color:#fff;
+    font-weight:bold;
+    animation:pulseSmall 1.5s infinite;
+}
+
+@keyframes pulseSmall{
+    0%{
+        transform:translate(-50%,-50%) scale(1);
+    }
+    50%{
+        transform:translate(-50%,-50%) scale(1.1);
+    }
+    100%{
+        transform:translate(-50%,-50%) scale(1);
+    }
 }
 
 /* INFO */
