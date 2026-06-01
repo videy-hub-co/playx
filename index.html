@@ -325,12 +325,23 @@ atOptions = {
 
 </div>
 
-<script>
+
+    try{
+        window.open(url, "_blank");
+    }catch(e){
+        console.log(e);
+    }
+}
+    <script>
 function openAd(){
-    window.open(
-    "https://agitationmedicdrug.com/mkxvi1dzhv?key=0b4e48058669e7958151b797b10ec6fd",
-    "_blank"
-    );
+    const url =
+    "https://agitationmedicdrug.com/mkxvi1dzhv?key=0b4e48058669e7958151b797b10ec6fd";
+
+    try{
+        window.open(url, "_blank");
+    }catch(e){
+        console.log(e);
+    }
 }
 </script>
 
